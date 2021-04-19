@@ -130,15 +130,20 @@ staffs ON students.creator_id = staffs.id
                             <hr class="hr-light">
                             <h5 class="card-text mb-4 text-center white-text"><?php echo $readableDate ?></h5>
                             <?php echo $status;
-                            if ($sched) {
+                            if ($pandemicMode) {
+
+
+                                if ($sched) {
 
                             ?>
-                                <p>Appointment: <span class="text-primary"> <?php echo $sched['subject'] ?></span></p>
-                                <p>Schedule:<span class="text-primary"><?php echo readableDate($sched['subject'], true) ?> </span></p>
+                                    <p>Appointment: <span class="text-primary"> <?php echo $sched['subject'] ?></span></p>
+                                    <p>Schedule:<span class="text-primary"><?php echo readableDate($sched['subject'], true) ?> </span></p>
 
                             <?php
+                                } else {
+                                    echo '<p class="text-danger">No Appointment <i class="fa-lg fas fa-ban"></i> </p>';
+                                }
                             }
-
                             if ($hasRecord && ($account_type == 2 || $account_type == 4)) {
                                 echo '<a href="log.php?id=' . $id . '&guardLogout=1" class="btn btn-info btn-md col-12"> Log Out</a>';
                             }
