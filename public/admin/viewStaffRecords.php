@@ -1,7 +1,7 @@
 <?php
 include('../../private/config.php');
 include('./shared/header.php');
-$account_types = [4];
+$account_types = [2, 3, 4];
 pageRestrict($account_types, "../", true);
 if (isset($_GET['staff_id']) && (int)$_GET['staff_id']) {
     $account_id = $_GET['staff_id'];
