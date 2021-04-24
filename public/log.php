@@ -111,13 +111,13 @@ staffs ON students.creator_id = staffs.id
 ?>
         <div class="container ">
             <div class="row text-center ">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <h3>QRDANCE</h3>
                     <h5>Online QR Code Attendance Tracking System</h5>
                     <p class="font-weight-bold">Guard's Attendance Checking System</p>
                     <img class="img-sm" src="./node_modules/mdbootstrap/img/ursLogo.png" alt="URS LOGO">
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <div class=" card  ">
                         <div class="view overlay">
                             <img class="card-img-top img-fluid" src="./node_modules/mdbootstrap/img/students/<?php echo $student_id . "." . displayFileExtension($student_id, 1); ?>" alt="Card image cap">
