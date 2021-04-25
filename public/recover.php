@@ -24,9 +24,9 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
         $message = 'Username:' . $credential['username'] . "<br>";
         $message .= 'Password:' . $credential['password'] . "<br>";
         if ($credential['active']) {
-            $active = "False";
-        } else {
             $active = "True";
+        } else {
+            $active = "False";
         }
         $message .= 'Active:' . $active . "<br>";
         $message .= $link;
