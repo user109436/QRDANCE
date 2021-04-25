@@ -219,7 +219,7 @@
                             <span>Extra</span>
                         </li>
                         <li>
-                            <a href="../node_modules/mdbootstrap/documentation.pdf" target="_blank">
+                            <a href="https://drive.google.com/file/d/1MIDRcShUZ2ABxfRrT-YWvMiKuN_vfDjQ/view?usp=sharing" target="_blank">
                                 <i class="fa fa-book"></i>
                                 <span>Documentation</span>
                             </a>
