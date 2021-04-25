@@ -71,9 +71,9 @@ if (isset($_GET['editID']) && $id = (int)$_GET['editID']) {
                                 </div>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="hidden" name="s" value="1">
+                                <input type="hidden" name="s" value="<?php echo isset($_GET['editID']) ? $_GET['editID'] : 1 ?>">
                                 <input type="hidden" id="s" value="1">
-                                <button class="btn btn-secondary p-3" type="submit" name="update" onclick="updateData('appointments')" value=" <?php echo isset($_GET['editID']) ? $_GET['editID'] : '' ?>"><i class="fas fa-save"></i> Update</button>
+                                <button class="btn btn-secondary p-3" type="submit" name="update" onclick="updateData('appointments')"><i class="fas fa-save"></i> Update</button>
                                 <input type="reset" name="reset" class="btn btn-danger">
                             </div>
                         </form>

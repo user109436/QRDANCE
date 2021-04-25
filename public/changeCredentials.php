@@ -33,9 +33,10 @@ if (isset($_POST['s']) && $_POST['s'] == 1 && count($_POST['credential']) == 4) 
             $passwordCorrect = findOne("SELECT password FROM accountlist WHERE id=?", $id);
             if ($passwordCorrect && count($errors) == 0) {
                 //change password
-                $sql = "UPDATE accountlist SET password=? WHERE id=?";
+                $encrypted_password = password_hash($s[2], PASSWORD_DEFAULT);
+                $sql = "UPDATE accountlist SET password=?, encrypted_password=? WHERE id=?";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("ss", $s[2], $id);
+                $stmt->bind_param("sss", $s[2], $encrypted_password, $id);
                 if (!execute($stmt)) {
                     array_push($errors, "Unknown Error Occured, Update Password Failed");
                 } else {

@@ -25,7 +25,7 @@ if ($students) {
             //display student
             //get their ids and check if they at school
 
-            $sql = "SELECT * FROM guard_attendance WHERE student_id =? AND date_created LIKE ? ORDER by id DESC";
+            $sql = "SELECT * FROM guard_attendance WHERE student_id =? AND date_created LIKE ? ORDER by id DESC LIMIT 1";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("ss", $student['id'], $dateToday);
             if ($stmt->execute() === TRUE) {

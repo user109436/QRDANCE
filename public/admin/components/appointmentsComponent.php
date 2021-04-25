@@ -1,7 +1,7 @@
 <?php
 include('../../../private/config.php');
 
-if (isset($_POST['s']) && $_POST['s'] == 1 && count($_POST['schedule']) == 2) {
+if (isset($_POST['s']) && $_POST['s'] >= 1 && count($_POST['schedule']) == 2) {
     $s = sanitizeInputs($_POST['schedule']);
     if ($s[1] > 1 || $s[1] < 0) {
         echo message("Invalid Value of Approved:" . $s[1]);
