@@ -59,8 +59,7 @@
                         ?>
                         <!-- Appointments -->
                         <?php
-                        $el = ';
-                        ?>
+                        $el = '
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fas fa-list-ol"></i>
@@ -80,7 +79,6 @@
                                 </ul>
                             </div>
                         </li>
-                        <?php
                         ';
                         adminOnly($el);
                         ?>
